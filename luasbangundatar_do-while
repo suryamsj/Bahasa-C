@@ -1,0 +1,62 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/* 
+*Title : Program Luas Bangun Datar Menggunakan Do-While
+*Author : Muhammad Surya Jayadiprana
+*Penting : Source code ini sudah ditambahkan menu lainnya, jadi tidak sama dengan yang ada ditutorial
+*/
+
+int main(int argc, char *argv[]) {
+	int menu,a,t,l,s,p,d1,d2; //Ini adalah sebuah deklarasi variabel
+	/*Dari sini*/
+	do{
+	printf("1.Segitiga \n");
+	printf("2.Persegi \n");
+	printf("3.Persegi panjang \n");
+	printf("4.Jajar Genjang \n");
+	printf("5.Layang-layang \n");
+	printf("0.Exit \n");
+	printf("================= \n");
+	/*Sampai sini adalah untuk menampilkan output dari pilihan menu yang tersedia*/
+	printf("Masukkan Menu :");scanf("%d",&menu);//Ini untuk menginput menu
+	switch(menu){//Ini adalah awal mula pembentukan menu dengan menggunakan switch
+		case 1:printf("================= \n");
+			   printf("Masukkan Alas :");scanf("%d",&a);//Untuk input alas
+			   printf("Masukkan Tinggi :");scanf("%d",&t);//Untuk input tinggi
+			   l=a*t/2;//Proses mencari luas segitiga
+			   printf("Luas Segitiga : %d \n",l);//Untuk menampilkan output dari proses mencari luas segitiga
+			   printf("================= \n");break;
+		case 2:printf("================= \n");
+			   printf("Masukkan Sisi :");scanf("%d",&s);//Untuk input sisi
+			   l=s*s;//Proses mencari luas persegi
+			   printf("Luas Persegi : %d \n",l);//Untuk menampilkan output dari proses mencari luas persegi
+			   printf("================= \n");break;
+		case 3:printf("================= \n");
+			   printf("Masukkan Panjang :");scanf("%d",&p);//Untuk input panjang
+			   printf("Masukkan Lebar :");scanf("%d",&s);//Untuk input lebar
+			   l=p*s;//Proses mencari luas persegi panjang
+			   printf("Luas Persegi Panjang : %d \n",l);//Output dari proses mencari luas persegi panjang
+			   printf("================= \n");break;
+		case 4:printf("================= \n");
+			   printf("Masukkan Alas :");scanf("%d",&a);//Untuk input alas
+			   printf("Masukkan Tinggi :");scanf("%d",&t);//Untuk input tinggi
+			   l=a*t;//Proses mencari luas persegi panjang
+			   printf("Luas Jajar Genjang : %d \n",l);//Output dari proses mencari luas jajar genjang
+			   printf("================= \n");break;
+		case 5:printf("================= \n");
+			   printf("Masukkan Diagonal Pertama :");scanf("%d",&d1);//Untuk input Diagonal pertama
+			   printf("Masukkan Diagonal Kedua :");scanf("%d",&d2);//Untuk input Diagonal kedua
+			   l=d1*d2/2;//Proses mencari luas layang-layang
+			   printf("Luas Layang-layang : %d \n",l);//Output dari proses mencari luas layang-layang
+			   printf("================= \n");break;
+		case 0:exit(0);
+		default:printf("================= \n");
+				printf("Maaf tidak ada pilihannya \n");//Ketika user menginput angka selain 1,2,3 dan 0. Maka akan menampilkan output tersebut
+				printf("================= \n");break;
+	}
+	
+	}
+	while(menu!=0);//Ketika menu tidak sama dengan 0, maka program akan terus berjalan..
+	return 0;
+}
